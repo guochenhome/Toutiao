@@ -129,6 +129,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         // recreate 时记录当前位置 (在 Manifest 已禁止 Activity 旋转,所以旋转屏幕并不会执行以下代码)
+        super.onSaveInstanceState(outState);
         outState.putInt(POSITION, position);
         outState.putInt(SELECT_ITEM, bottom_navigation.getSelectedItemId());
     }
